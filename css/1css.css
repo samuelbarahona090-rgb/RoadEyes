@@ -1,0 +1,92 @@
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+    }
+
+    .producto {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .producto img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .info p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .precio {
+      font-size: 24px;
+      color: #1e3c72;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .boton {
+      background: #2a5298;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background: #1e3c72;
+    }
+    
+  

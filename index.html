@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Road Eyes</title>
+  <link rel="stylesheet" href="./css/1css.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    /* Estilo para ocultar la sección QR inicialmente */
+    #qr-section {
+      display: none;
+      text-align: center;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Tienda virtual</a></li>
+        <li><a href="./paginas/producto.html">Producto</a></li>
+        <li><a href="./paginas/contacto.html">Contacto</a></li>
+        <li><a href="#" onclick="mostrarQR()">QR de la página</a></li>
+        <li><a href="./paginas/Empresa.html">Empresa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="producto" id="producto">
+    <img src="./imagenes/ROad Eyes.PNG" alt="Gafas Antichoque">
+    <div class="info">
+      <h1>Gafas Antichoque</h1>
+      <p></p>
+      <div class="precio">1.500.000$</div>
+<button class="boton"><li><a href="./index.html"></a></li>Comprar Ahora</button>
+    </div>
+  </section>
+
+  <!-- Sección QR oculta -->
+  <section id="qr-section">
+    <h2>Escanea para visitar el sitio</h2>
+    <div id="qrcode" style="margin: 20px auto;"></div>
+  </section>
+
+  <script>
+    // URL pública de tu sitio (reemplaza con la real cuando lo subas)
+    const urlPublica = "https://tusitio.netlify.app";
+
+    // Función para mostrar el QR
+    function mostrarQR() {
+      const qrSection = document.getElementById("qr-section");
+      qrSection.style.display = "block";
+
+      // Solo generar el QR si aún no existe
+      if (!document.getElementById("qrcode").hasChildNodes()) {
+        new QRCode(document.getElementById("qrcode"), {
+          text: urlPublica,
+          width: 180,
+          height: 180,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
